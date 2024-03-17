@@ -1,3 +1,5 @@
+import pathlib
+
 from dash import Dash, dcc, html, Input, Output, State
 import pandas as pd
 import plotly.graph_objects as go
@@ -6,9 +8,9 @@ cwd = os.getcwd()
 fibre = os.path.join(cwd,"Fiber 10")
 files = os.listdir(fibre)
 # file_path = os.path.join(fibre, files[0])
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-
+PATH = pathlib.Path(__file__).parent
 app = Dash(__name__)
 server = app.server
 def analyisis(file_path):
