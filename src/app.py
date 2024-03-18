@@ -90,6 +90,6 @@ def update(file,fibre_choice):
     print(fibre_choice)
     files = os.listdir(fibre)
     return (fig, files)
-app.run_server(debug=True)
+app.run_server(debug=True,port=8000)
 
 
